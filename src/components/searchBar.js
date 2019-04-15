@@ -27,14 +27,24 @@ const styles = {
 
 function CustomizedInputBase(props) {
   const { classes } = props;
-
+  let term = '';
+    const onSubmit = (event) => {
+        event.preventDefault();
+        props.onInputSubmitted(term);
+    }
   return (
     <div className="searchbar-container">
-    <form>
+    <form onSubmit={onSubmit}>
     <Paper className={classes.root} elevation={1}>
-      <InputBase className={classes.input} placeholder="Search for weather in cities accros the world!" />
+      <InputBase 
+                className={classes.input} 
+                onChange={(event)=>{
+                    term = event.target.value;
+                            }} 
+                placeholder="Search for weather in cities accros the world!" />
+
       <IconButton className={classes.iconButton} aria-label="Search">
-      <i class="fas fa-search-location"></i>
+      <i className="fas fa-search-location"></i>
       </IconButton>
     </Paper>
     </form>

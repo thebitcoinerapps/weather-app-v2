@@ -1,9 +1,7 @@
 .App {
   width: 100%;
   margin: auto;
-  background: #00F260;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+
 
 }
 /*styling for header section */
@@ -36,4 +34,11 @@
   width: 80%;
   margin: auto;
   padding-top: 10px;
+}
+.spinner{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
 }
