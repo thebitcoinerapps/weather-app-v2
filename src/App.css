@@ -4,6 +4,11 @@
 
 
 }
+hr{
+  height: 0px;
+  background-color: black;
+  opacity: 0.5;
+}
 /*styling for header section */
 .header{
   width: 80%;
@@ -45,6 +50,7 @@
   margin: auto;
   padding-top: 10px;
   animation: fadein 1s;
+
 }
 .spinner{
   width: 80%;

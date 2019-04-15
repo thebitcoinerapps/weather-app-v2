@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
   root: {
@@ -27,7 +28,16 @@ function FullWidthGrid(props) {
           <Paper className={classes.paper}>xs=12 sm=6</Paper>
         </Grid>
         <Grid item xs={6} sm={4}>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
+          <Paper className={classes.paper}>
+          <div className="current-condition">
+          <Typography>
+          Current Conditions
+          <hr />
+          </Typography>
+          
+          
+          </div>
+          </Paper>
         </Grid>
       </Grid>
       </div>
