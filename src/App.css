@@ -1,3 +1,34 @@
 .App {
-  text-align: center;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  background: #00F260;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+
+}
+/*styling for header section */
+.header{
+  width: 80%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+.company-name{
+  margin: 0;
+  padding: 2px;
+  padding-top: 10px;
+  font-size: 1.5em;
+}
+.logo{
+  width: 66px;
+  height: 66px;
+  padding: 2px;
+  margin: 0;
+}
+/*searchbar section */
+.searchbar-container{
+  padding-top: 10px;
+  width: 80%;
+  margin: auto;
 }
