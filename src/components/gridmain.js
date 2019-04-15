@@ -25,14 +25,18 @@ function FullWidthGrid(props) {
     <div className={classes.root}>
       <Grid container spacing={24}>
         <Grid item xs={6} sm={8}>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
+          <Paper className={classes.paper}>
+          <Typography>
+          Weather for {props.state.term}
+          </Typography>
+          
+          </Paper>
         </Grid>
         <Grid item xs={6} sm={4}>
           <Paper className={classes.paper}>
           <div className="current-condition">
           <Typography>
-          Current Conditions
-          <hr />
+          Current Condition
           </Typography>
           
           

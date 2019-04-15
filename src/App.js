@@ -48,7 +48,7 @@ class App extends Component {
     }else if(!this.state.search && this.state.forecast !== null){
       spinner = null;
       //display details
-      maingrid =  <MainGrid />;
+      maingrid =  <MainGrid state={this.state} />;
       gridforecast = <GridForecast />
 
     }
