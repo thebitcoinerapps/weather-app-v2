@@ -1,12 +1,11 @@
 import React from 'react';
-import { ReactComponent as Logo }from '../logo.svg';
 
 const Header = () => {
 
     return(
         <div className="header">
-        <p className="company-name">Fast Weather</p>
-        <Logo className="logo" />
+        <p className="company-name">Fast Weather App</p>
+        <div className="logo-container"><i className="far fa-sun logo"/></div>
         </div>
     );
 
