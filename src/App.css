@@ -34,6 +34,7 @@
   width: 80%;
   margin: auto;
   padding-top: 10px;
+  animation: fadein 1s;
 }
 .spinner{
   width: 80%;
@@ -41,4 +42,16 @@
   display: flex;
   justify-content: center;
   padding: 40px;
+}
+.error{
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  margin: auto;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100%   { opacity: 1; }
 }
