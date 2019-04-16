@@ -16,7 +16,8 @@ class App extends Component {
     geo: null,
     search: false,
     error: false,
-    forecast: null
+    forecast: null,
+    mapUrl: null
   };
   onInputSubmitted = (city)=>{
     this.setState({term: city});
@@ -26,6 +27,7 @@ class App extends Component {
     this.setState({search: true})
     geoCall(city).then((res)=>{
       this.setState({geo: res.data.results[0].geometry});
+      this.setState({mapUrl: res.data.results[0].annotations.OSM.url})
       this.setState({error: false});
       let geoCode = (Object.values(this.state.geo).join());
       getForecast(geoCode).then((res)=>{

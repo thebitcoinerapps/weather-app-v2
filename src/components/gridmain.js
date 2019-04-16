@@ -67,17 +67,18 @@ function FullWidthGrid(props) {
     <div className="grid-container">
     <div className={classes.root}>
       <Grid container spacing={24}>
-        <Grid item xs={6} sm={8}>
+        <Grid item xs={12} sm={8}>
           <Paper className={classes.paper}>
           <div className="current-details">
           <Typography color={"textPrimary"} align={"left"} variant={"h5"}>
           Weather for {props.state.term}
           </Typography>
+          <img src={`https://cors-anywhere.herokuapp.com/${props.state.mapUrl}`}></img>
           </div>
-          
+
           </Paper>
         </Grid>
-        <Grid item xs={6} sm={4}>
+        <Grid item xs={12} sm={4}>
           <Paper className={classes.paper}>
           <div className="current-condition">
           <Typography color={"textPrimary"} align={"left"} variant={"h5"}>
