@@ -49,7 +49,7 @@ class App extends Component {
       spinner = null;
       //display details
       maingrid =  <MainGrid state={this.state} />;
-      gridforecast = <GridForecast />
+      gridforecast = <GridForecast state={this.state} />
 
     }
     if(this.state.error){

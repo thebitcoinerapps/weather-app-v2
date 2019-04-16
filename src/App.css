@@ -73,7 +73,15 @@ hr{
   padding-bottom: 20px;
   animation: fadein 2s;
 }
+.forecast-img{
+  float: left;
+  width: 20%;
+}
 .current-condition{
+  display: flex;
+  flex-direction: column;
+}
+.forecast-card{
   display: flex;
   flex-direction: column;
 }

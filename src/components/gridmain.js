@@ -5,6 +5,15 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import clearday from '../img/clear-day.png';
+import clearnight from '../img/clear-night.png';
+import cloudy from '../img/cloudy.png';
+import fog from '../img/fog.png';
+import partlycloudyday from '../img/partly-cloudy-day.png';
+import partlycloudynight from '../img/partlycloudynight.png';
+import rain from '../img/rain.png';
+import sleet from '../img/sleet.png';
+import snow from '../img/snow.png';
+import wind from '../img/wind.png';
 
 const styles = theme => ({
   root: {
@@ -20,6 +29,39 @@ const styles = theme => ({
 
 function FullWidthGrid(props) {
   const { classes } = props;
+  let weatherIcon = null;
+  switch(props.state.forecast.currently.icon){
+    case 'clear-day':
+      weatherIcon = clearday;
+      break;
+    case 'clear-night':
+      weatherIcon = clearnight;
+      break;
+    case 'rain':
+      weatherIcon = rain;
+      break;
+    case 'snow':
+      weatherIcon = snow;
+      break;
+    case 'sleet':
+      weatherIcon = sleet;
+      break;
+    case 'wind':
+      weatherIcon = wind;
+      break;
+    case 'fog':
+      weatherIcon = fog;
+      break;
+    case 'cloudy':
+      weatherIcon = cloudy;
+      break;
+    case 'partly-cloudy-day':
+      weatherIcon = partlycloudyday;
+      break;
+    case 'partly-cloudy-night':
+      weatherIcon = partlycloudynight;
+      break;
+  }
 
   return (
     <div className="grid-container">
@@ -41,7 +83,7 @@ function FullWidthGrid(props) {
           <Typography color={"textPrimary"} align={"left"} variant={"h5"}>
           Current Condition
           </Typography>
-          <img className="icons-weather" src={clearday} alt="weather condition"></img>
+          <img className="icons-weather" src={weatherIcon} alt="weather condition"></img>
           <Typography color={"textPrimary"} align={"right"} variant={"h3"} noWrap={false}>
           {props.state.forecast.currently.temperature} C
           </Typography>
