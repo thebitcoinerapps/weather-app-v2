@@ -81,9 +81,17 @@ hr{
   display: flex;
   flex-direction: column;
 }
+.current-details{
+
+}
 .forecast-card{
   display: flex;
   flex-direction: column;
+}
+.map{
+  width: 80%;
+  padding: 10px;
+  height: 100%;
 }
 
 

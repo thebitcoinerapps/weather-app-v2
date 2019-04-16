@@ -15,6 +15,8 @@ import sleet from '../img/sleet.png';
 import snow from '../img/snow.png';
 import wind from '../img/wind.png';
 
+
+
 const styles = theme => ({
   root: {
     flexGrow: 1,
@@ -30,7 +32,6 @@ const styles = theme => ({
 function FullWidthGrid(props) {
   const { classes } = props;
   let weatherIcon = null;
-  let map = null;
   switch(props.state.forecast.currently.icon){
     case 'clear-day':
       weatherIcon = clearday;
@@ -65,7 +66,6 @@ function FullWidthGrid(props) {
   };
 
 
-
   return (
     <div className="grid-container">
     <div className={classes.root}>
@@ -76,6 +76,10 @@ function FullWidthGrid(props) {
           <Typography color={"textPrimary"} align={"left"} variant={"h5"}>
           Weather for {props.state.term}
           </Typography>
+          <img className="map" 
+          src={`https://image.maps.api.here.com/mia/1.6/mapview?app_id=vEOEYVqzHKmoZQpz0Wyb&app_code=4kWldzChWKcc2U5MYC0k1w&style=fleet&w=500&h=200&z=6&c=${props.state.geo.lat},${props.state.geo.lng}`}
+          alt="map"></img>
+          
           </div>
 
           </Paper>
