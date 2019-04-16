@@ -30,6 +30,7 @@ const styles = theme => ({
 function FullWidthGrid(props) {
   const { classes } = props;
   let weatherIcon = null;
+  let map = null;
   switch(props.state.forecast.currently.icon){
     case 'clear-day':
       weatherIcon = clearday;
@@ -61,7 +62,8 @@ function FullWidthGrid(props) {
     case 'partly-cloudy-night':
       weatherIcon = partlycloudynight;
       break;
-  }
+  };
+
 
   return (
     <div className="grid-container">
@@ -73,7 +75,6 @@ function FullWidthGrid(props) {
           <Typography color={"textPrimary"} align={"left"} variant={"h5"}>
           Weather for {props.state.term}
           </Typography>
-          <img src={`https://cors-anywhere.herokuapp.com/${props.state.mapUrl}`}></img>
           </div>
 
           </Paper>

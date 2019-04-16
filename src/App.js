@@ -26,6 +26,7 @@ class App extends Component {
   findLatLog = (city) => {
     this.setState({search: true})
     geoCall(city).then((res)=>{
+      console.log(res);
       this.setState({geo: res.data.results[0].geometry});
       this.setState({mapUrl: res.data.results[0].annotations.OSM.url})
       this.setState({error: false});

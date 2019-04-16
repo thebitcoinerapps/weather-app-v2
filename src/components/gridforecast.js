@@ -22,7 +22,7 @@ const styles = theme => ({
   paper: {
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
-    height: '120px',
+    height: '150px',
     color: theme.palette.text.secondary,
   },
 });
@@ -74,7 +74,7 @@ function FullWidthGridForecast(props) {
     <div className="grid-container">
     <div className={classes.root}>
       <Grid container spacing={24}>
-        <Grid item xs={6} sm={3}>
+        <Grid item xs={12} sm={3}>
           <Paper className={classes.paper}>
           <div className="forecast-card">
           <Typography variant={"h6"} align={"left"} noWrap={true}>
@@ -91,7 +91,7 @@ function FullWidthGridForecast(props) {
           </Paper>
           
         </Grid>
-        <Grid item xs={6} sm={3}>
+        <Grid item xs={12} sm={3}>
           <Paper className={classes.paper}>
           <div className="forecast-card">
           <Typography variant={"h6"} align={"left"} noWrap={true}>
@@ -107,7 +107,7 @@ function FullWidthGridForecast(props) {
             </div>
           </Paper>
         </Grid>
-        <Grid item xs={6} sm={3}>
+        <Grid item xs={12} sm={3}>
           <Paper className={classes.paper}>
           <div className="forecast-card">
           <Typography variant={"h6"} align={"left"} noWrap={true}>
@@ -123,7 +123,7 @@ function FullWidthGridForecast(props) {
             </div>
           </Paper>
         </Grid>
-        <Grid item xs={6} sm={3}>
+        <Grid item xs={12} sm={3}>
           <Paper className={classes.paper}>
           <div className="forecast-card">
           <Typography variant={"h6"} align={"left"} noWrap={true}>
