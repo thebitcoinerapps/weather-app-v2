@@ -64,12 +64,11 @@ function FullWidthGridForecast(props) {
       case 'partly-cloudy-day':
         return partlycloudyday;
         
-      case 'partly-cloudy-nigh':
+      case 'partly-cloudy-night':
         return partlycloudynigh;
         
     }
   }
-
   return (
     <div className="grid-container">
     <div className={classes.root}>
