@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import clearday from '../img/clear-day.png';
 
 const styles = theme => ({
   root: {
@@ -26,20 +27,24 @@ function FullWidthGrid(props) {
       <Grid container spacing={24}>
         <Grid item xs={6} sm={8}>
           <Paper className={classes.paper}>
-          <Typography>
+          <div className="current-details">
+          <Typography color={"textPrimary"} align={"left"} variant={"h5"}>
           Weather for {props.state.term}
           </Typography>
+          </div>
           
           </Paper>
         </Grid>
         <Grid item xs={6} sm={4}>
           <Paper className={classes.paper}>
           <div className="current-condition">
-          <Typography>
+          <Typography color={"textPrimary"} align={"left"} variant={"h5"}>
           Current Condition
           </Typography>
-          
-          
+          <img className="icons-weather" src={clearday} alt="weather condition"></img>
+          <Typography color={"textPrimary"} align={"right"} variant={"h3"} noWrap={false}>
+          {props.state.forecast.currently.temperature} C
+          </Typography>
           </div>
           </Paper>
         </Grid>

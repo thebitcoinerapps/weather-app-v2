@@ -66,6 +66,20 @@ hr{
   margin: auto;
   animation: fadein 1s;
 }
+.icons-weather{
+  width: 40%;
+  float: left;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  animation: fadein 2s;
+}
+.current-condition{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
 
 @keyframes fadein {
   0% { opacity: 0; }
