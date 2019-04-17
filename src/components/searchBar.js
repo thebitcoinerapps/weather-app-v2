@@ -43,7 +43,7 @@ function CustomizedInputBase(props) {
                             }} 
                 placeholder="Search for weather in cities accros the world!" />
 
-      <IconButton className={classes.iconButton} aria-label="Search">
+      <IconButton className={classes.iconButton} aria-label="Search" onClick={onSubmit}>
       <i className="fas fa-search-location"></i>
       </IconButton>
     </Paper>
