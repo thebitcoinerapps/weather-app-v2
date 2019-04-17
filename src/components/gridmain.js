@@ -77,7 +77,7 @@ function FullWidthGrid(props) {
           Weather for {props.state.term}
           </Typography>
           <img className="map" 
-          src={`https://image.maps.api.here.com/mia/1.6/mapview?app_id=vEOEYVqzHKmoZQpz0Wyb&app_code=4kWldzChWKcc2U5MYC0k1w&style=fleet&w=500&h=200&z=6&c=${props.state.geo.lat},${props.state.geo.lng}`}
+          src={`https://image.maps.api.here.com/mia/1.6/mapview?app_id=vEOEYVqzHKmoZQpz0Wyb&app_code=4kWldzChWKcc2U5MYC0k1w&style=fleet&w=400&h=200&z=6&c=${props.state.geo.lat},${props.state.geo.lng}`}
           alt="map"></img>
           
           </div>

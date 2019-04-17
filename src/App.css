@@ -81,9 +81,7 @@ hr{
   display: flex;
   flex-direction: column;
 }
-.current-details{
 
-}
 .forecast-card{
   display: flex;
   flex-direction: column;
