@@ -73,11 +73,25 @@ function FullWidthGrid(props) {
         <Grid item xs={12} sm={8}>
           <Paper className={classes.paper}>
           <div className="current-details">
+          <div className="current-data">
           <Typography color={"textPrimary"} align={"left"} variant={"h5"}>
-          Weather for {props.state.term}
+          {props.state.term}
           </Typography>
+          <Typography color={"textSecondary"} align={"left"} variant={"h6"} className="current-data-text">
+          Lat: {props.state.geo.lat} Lng: {props.state.geo.lng}
+          </Typography>
+          <Typography color={"textSecondary"} align={"left"} variant={"h6"} className="current-data-text">
+          Pressure {props.state.forecast.currently.pressure} hPa
+          </Typography>
+          <Typography color={"textSecondary"} align={"left"} variant={"h6"} className="current-data-text">
+          Wind speed {props.state.forecast.currently.windSpeed} m/s
+          </Typography>
+          <Typography color={"textSecondary"} align={"left"} variant={"h6"} className="current-data-text">
+          Humidity {props.state.forecast.currently.humidity} 
+          </Typography>
+          </div>
           <img className="map" 
-          src={`https://image.maps.api.here.com/mia/1.6/mapview?app_id=vEOEYVqzHKmoZQpz0Wyb&app_code=4kWldzChWKcc2U5MYC0k1w&style=fleet&w=400&h=200&z=6&c=${props.state.geo.lat},${props.state.geo.lng}`}
+          src={`https://image.maps.api.here.com/mia/1.6/mapview?app_id=vEOEYVqzHKmoZQpz0Wyb&app_code=4kWldzChWKcc2U5MYC0k1w&style=fleet&z=8&c=${props.state.geo.lat},${props.state.geo.lng}`}
           alt="map"></img>
           
           </div>

@@ -60,7 +60,6 @@ class App extends Component {
     }else{
       error = null;
     }
-    console.log(this.state);
     return (
       <div className="App">
       <Header />
